@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* Primary Colors */
+  --color-team-builder: hsl(0, 78%, 62%);
+  --color-team-supervisor: hsl(180, 62%, 55%);
+  --color-team-karma: hsl(34, 97%, 64%);
+  --color-team-calculator: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --background-color--main: hsl(0, 0%, 98%);
+  --background-color--card: hsl(0, 0%, 100%);
+  --color-default: hsl(229, 6%, 66%);
+  --color-title: hsl(234, 12%, 34%);
+
+  /* Typography */
+  --font-size-default: 15px;
+  --font-family-default: "Poppins", sans-serif;
+  --font-weight-light: 200;
+  --font-weight-default: 400;
+  --font-weight-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-default);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-default);
+  background-color: var(--background-color--main);
+  color: var(--color-default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  width: 83%;
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 1em 0 3em;
+}
+
+.intro__title {
+  color: var(--color-title);
+  text-align: center;
+  font-size: 1.7rem; /* 25.5px */
+  font-weight: var(--font-weight-light);
+  margin-bottom: 0.7em;
+}
+
+.intro__paragraph {
+  text-align: center;
+  font-size: 1.05rem;
+  /* font-size: 1rem; */
+}
+
+.card {
+  background-color: var(--background-color--card);
+  box-shadow: 0px 8px 24px hsl(210, 38%, 90%);
+  border: none;
+  border-radius: 0.6rem;
+  /* border-bottom-left-radius: 0.6rem; */
+  /* border-bottom-right-radius: 0.6rem; */
+  padding: 1.5em 0 1.8em;
+  margin-bottom: 2em;
+}
+
+.card__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__title {
+  color: var(--color-title);
+  font-size: 1.375rem;
+  line-height: 0.4;
+}
+
+.card__paragraph {
+  font-size: 0.86em;
+  margin-bottom: 2.3rem;
+}
+
+.icon__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card__icon {
+  width: 60px;
+  height: 60px;
+}
+
+/* Modifiers */
+.title--weight {
+  font-weight: var(--font-weight-bold);
+}
+
+.card--supervisor {
+  border-top: 4px outset var(--color-team-supervisor);
+}
+.card--team-builder {
+  border-top: 4px outset var(--color-team-supervisor);
+}
+.card--karma {
+  border-top: 4px outset var(--color-team-supervisor);
+}
+.card--calculator {
+  border-top: 4px outset var(--color-team-supervisor);
+}
