@@ -13,9 +13,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## About myself
 
@@ -55,7 +53,7 @@ Users should be able to:
   - We can use a _section_ element as a card container.
   - Each card have a title which is good because _section_ element need to have one. Here, a _h2_ would do.
   - Then a paragraph _p_ and a svg image/icon located in the bottom right corner. We can use an _img_ element here.
-  - Between the _section_ and its content, we'll add a _div_ element with a width in percentage. That way, we won't have to _padding_ for the cards.
+  - Between the _section_ and its content, we'll add a _div_ element with a width in percentage. That way, we won't have to use _padding_ for the cards.
   - Each card have a border top of a different color. Border style seems to be _inset_.
   - Also, each card use a light _box shadow_ and _border-radius_.
 
@@ -80,8 +78,8 @@ Users should be able to:
 
 ```html
 <section class="card card--supervisor">
-  <div class="card__hidden hidden--supervisor"></div>
   /* The famous div!*/
+  <div class="card__hidden hidden--supervisor"></div>
   <div class="card__container">
     <h2 class="card__title">Supervisor</h2>
     <p class="card__paragraph">
