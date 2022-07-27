@@ -1,91 +1,132 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor - Four card feature section solution
 
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [About myself](#about-myself)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## About myself
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+Hi! I'm Jordan, an aspiring frontend developer. This means that this project is probably not the best learning material. That being said, i'll try to explain my process to the best of my abilities (which is kinda limited considering the fact that english isn't my first language, by the way my apologies for any mispellings or grammatical errors) in case someone happen to read this file. Worst case scenario, i can always come back to this project later and have fun at how bad i was back then!
 
-## The challenge
+## Overview
 
-Your challenge is to build out this feature section and get it looking as close to the design as possible.
+### The challenge
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./images/four-card-feature-desktop.png)
+![](./images/four-card-feature-mobile.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [Project on GitHub](https://github.com/joanFaseDev/four-card-feature-app)
+- Live Site URL: [Project hosted through Vercel](https://four-card-feature-app.vercel.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Analysis
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- This project is made out of a few elements:
 
-## Building your project
+  - A _main_ element to act as a global container.
+  - A head title, a _h1_ element will do. Inside the _h1_, we'll need a span for some strings have a bigger font-weight.
+  - A paragraph _p_, probably using the default font size.
+  - Four cards
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- Each card have a different content but their layout is the same:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+  - We can use a _section_ element as a card container.
+  - Each card have a title which is good because _section_ element need to have one. Here, a _h2_ would do.
+  - Then a paragraph _p_ and a svg image/icon located in the bottom right corner. We can use an _img_ element here.
+  - Between the _section_ and its content, we'll add a _div_ element with a width in percentage. That way, we won't have to _padding_ for the cards.
+  - Each card have a border top of a different color. Border style seems to be _inset_.
+  - Also, each card use a light _box shadow_ and _border-radius_.
 
-## Deploying your project
+- Because the card's layout is the same, we can reuse a lot of code by using appropriate classes.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- The global layout for the mobile design is simple enough, one column for five rows. As for the desktop design, it's probably three columns for five rows. We'll use CSS Grid for the global layout and maybe Flexbox for the layout's cards.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- As usual, we'll start with the mobile design for it is easier to add complexity to a design than to remove from it.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Built with
 
-## Create a custom `README.md`
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### What I learned
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- This project gave me the opportunity to experiment with borders. The card's design here is particular, precisely the way the color border of each card is cut. Initially i couldn't replicate the angle as seen in the mockup but i ended up 'making the cut' (ahaha) by using the following recipe:
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+  Basically i designed each card as a _section_ element so i nested a _div_ between my sections and their sub-containers (i used them to replace padding by setting a max-width).
 
-## Submitting your solution
+```html
+<section class="card card--supervisor">
+  <div class="card__hidden hidden--supervisor"></div>
+  /* The famous div!*/
+  <div class="card__container">
+    <h2 class="card__title">Supervisor</h2>
+    <p class="card__paragraph">
+      Monitors activity to identify project roadblocks
+    </p>
+    <div class="icon__container">
+      <img
+        src="./images/icon-supervisor.svg"
+        alt="A styled image of a magnifying glass with an open eye in its center."
+        class="card__icon"
+      />
+    </div>
+  </div>
+</section>
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+Then i create a top border for the div then used the _overflow_ property of my sections to 'cut' the border in the appropriate way.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```css
+.card {
+  box-shadow: var(--box-shadow--card) 0px 18px 30px -5px;
+  background-color: var(--background-color--card);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0 0 1.8em;
+  margin-bottom: 1.8em;
+  overflow: hidden;
+}
 
-## Sharing your solution
+.card__hidden {
+  height: 1.4em;
+}
 
-There are multiple places you can share your solution:
+.hidden--supervisor {
+  border-top: 4px solid var(--color-team-supervisor);
+}
+```
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+There's probably better ways to do it and i'll try to ask the Frontend Mentor's community about it but honestly i'm quite satisfied with the current result (one of the best thing about being a developer is that feeling of finding a solution by oneself).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### Continued development
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- I'm gonna keep working on CSS fundamentals like position, length units, responsive design (i put it in the fundamentals because it's basically mandatory nowadays), flexbox and grid.
+- I still have two level 1 project from Frontend Mentor with nothing but HTML and CSS. Then i'll add JavaScript to the lot. I'm impatient because i didn't use the language in 2 weeks and i don't want to lose what little i managed to learn (i put a short stop to JavaScript because i felt i needed to learn more about CSS before mixing the two).
 
-## Got feedback for us?
+## Author
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@joanFaseDev](https://www.frontendmentor.io/profile/joanFaseDev)
