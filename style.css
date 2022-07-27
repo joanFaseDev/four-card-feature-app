@@ -10,6 +10,7 @@
   /* Neutral Colors */
   --background-color--main: hsl(0, 0%, 98%);
   --background-color--card: hsl(0, 0%, 100%);
+  --box-shadow--card: hsl(212, 48%, 89%);
   --color-default: hsl(229, 6%, 66%);
   --color-title: hsl(234, 12%, 34%);
 
@@ -49,7 +50,7 @@ body {
 }
 
 .intro {
-  padding: 1em 0 3em;
+  padding: 1em 0 3.5em;
 }
 
 .intro__title {
@@ -67,14 +68,13 @@ body {
 }
 
 .card {
+  box-shadow: var(--box-shadow--card) 0px 30px 20px -20px;
   background-color: var(--background-color--card);
-  box-shadow: 0px 8px 24px hsl(210, 38%, 90%);
   border: none;
   border-radius: 0.6rem;
-  /* border-bottom-left-radius: 0.6rem; */
-  /* border-bottom-right-radius: 0.6rem; */
-  padding: 1.5em 0 1.8em;
-  margin-bottom: 2em;
+  padding: 0 0 1.8em;
+  margin-bottom: 1.8em;
+  overflow: hidden;
 }
 
 .card__container {
@@ -103,20 +103,25 @@ body {
   height: 60px;
 }
 
+.card__hidden {
+  height: 1.4em;
+}
+
 /* Modifiers */
 .title--weight {
   font-weight: var(--font-weight-bold);
 }
 
-.card--supervisor {
-  border-top: 4px outset var(--color-team-supervisor);
+.hidden--supervisor {
+  border-top: 4px solid var(--color-team-supervisor);
 }
-.card--team-builder {
-  border-top: 4px outset var(--color-team-supervisor);
+
+.hidden--team-builder {
+  border-top: 4px outset var(--color-team-builder);
 }
-.card--karma {
-  border-top: 4px outset var(--color-team-supervisor);
+.hidden--karma {
+  border-top: 4px outset var(--color-team-karma);
 }
-.card--calculator {
-  border-top: 4px outset var(--color-team-supervisor);
+.hidden--calculator {
+  border-top: 4px outset var(--color-team-calculator);
 }
