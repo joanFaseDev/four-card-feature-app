@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Four card feature section</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="intro">
+        <h1 class="intro__title">
+          Reliable, efficient delivery<span class="title--weight"></span>
+            Powered by Technology</span
+          >
+        </h1>
+        <p class="intro__paragraph">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </section>
+      <section class="card">
+        <div class="card__container">
+          <h2 class="card__title">Supervisor</h2>
+          <p class="card__paragraph">
+            Monitors activity to identify project roadblocks
+          </p>
+          <div class="icon__container">
+            <img
+              src="./images/icon-supervisor.svg"
+              alt="A styled image of a magnifying glass with an open eye in its center."
+              class="card__icon"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card__container">
+          <h2 class="card__title">Team Builder</h2>
+          <p class="card__paragraph">
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <div class="icon__container">
+            <img
+              src="./images/icon-team-builder.svg"
+              alt="A styled image of a red house in front of browser's window."
+              class="card__icon"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card__container">
+          <h2 class="card__title">Karma</h2>
+          <p class="card__paragraph">
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <div class="icon__container">
+            <img
+              src="./images/icon-karma.svg"
+              alt="A styled image of lamp turned on;"
+              class="card__icon"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card__container">
+          <h2 class="card__title">Calculator</h2>
+          <p class="card__paragraph">
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <div class="icon__container">
+            <img
+              src="./images/icon-calculator.svg"
+              alt="A styled image of a desktop screen with blue interface."
+              class="card__icon"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

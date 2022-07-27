@@ -1,9 +1,10 @@
 # Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
+- [About myself](#about-myself)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -16,7 +17,9 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## About myself
+
+Hi! I'm Jordan, an aspiring frontend developer. This means that this project is probably not the best learning material. That being said, i'll try to explain my process to the best of my abilities (which is kinda limited considering the fact that english isn't my first language, by the way my apologies for any mispellings or grammatical errors) in case someone happen to read this file. Worst case scenario, i can always come back to this project later and have fun at how bad i was back then!
 
 ## Overview
 
@@ -30,20 +33,36 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Project on GitHub](https://github.com/joanFaseDev/four-card-feature-app)
+- Live Site URL: [Project hosted through Vercel](https://four-card-feature-app.vercel.app/)
 
 ## My process
+
+### Analysis
+
+- This project is made out of a few elements:
+
+  - A _main_ element to act as a global container.
+  - A head title, a _h1_ element will do. Inside the _h1_, we'll need a span for some strings have a bigger font-weight.
+  - A paragraph _p_, probably using the default font size.
+  - Four cards
+
+- Each card have a different content but their layout is the same:
+
+  - We can use a _section_ element as a card container.
+  - Each card have a title which is good because _section_ element need to have one. Here, a _h2_ would do.
+  - Then a paragraph _p_ and a svg image/icon located in the bottom right corner. We can use an _img_ element here.
+  - Between the _section_ and its content, we'll add a _div_ element with a width in percentage. That way, we won't have to _padding_ for the cards.
+  - Each card have a border top of a different color. Border style seems to be _inset_.
+  - Also, each card use a light _box shadow_ and _border-radius_.
+
+- Because the card's layout is the same, we can reuse a lot of code by using appropriate classes.
+
+- The global layout for the mobile design is simple enough, one column for five rows. As for the desktop design, it's probably three columns for five rows. We'll use CSS Grid for the global layout and maybe Flexbox for the layout's cards.
+
+- As usual, we'll start with the mobile design for it is easier to add complexity to a design than to remove from it.
 
 ### Built with
 
@@ -51,12 +70,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -67,15 +80,17 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  console.log("🎉");
+};
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
